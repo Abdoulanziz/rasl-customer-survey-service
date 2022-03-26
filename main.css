@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+:root {
+    --font-1: 'Lato', sans-serif;
+    --font-2: 'Poppins', sans-serif;
+
+    --color-primary: orangered;
+    --color-secondary: orange;
+
+    --bg-1: #001e00;
+    --bg-2: #65735b;
+    --bg-3: #9aaa97;
+    --bg-4: #d5e0d5;
+    --bg-5: #e4ebe4;
+    --bg-6: #f2f7f2;
+    --bg-7: #beccbe;
+    --bg-8: #f2f6fa;
+    --bg-9: #ffffff;
+
+    --text-white: #ffffff;
+    --text-light: #cccccc;
+    --text-grey: #808080;
+    --text-dark: #333333;
+    --text-black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: var(--text-grey);
+    font-family: var(--font-1);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1100px;
+    overflow: auto;
+}
+
+.flex {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+.avatar {
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.btn {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    color: var(--text-white);
+    background-color: var(--color-secondary);
+}
+
+.card {
+    color: var(--text-dark);
+    background-color: var(--bg-9);
+    width: 70%;
+    height: 80%;
+    border-radius: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    background-color: var(--color-secondary);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px 40px;
+    margin-left: 0;
+}
+
+.content {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px 40px;
+}
+
+.content .data {
+    margin-left: .5rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-6);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.content .flex {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.card h3 {
+    margin-bottom: 0;
+    letter-spacing: normal;
+    color: var(--text-white);
+    font-weight: bold;
+}
+
+.loader .icon {
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+}
+
+.loader .icon .circle-1 {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+.loader .icon .circle-2 {
+    margin: 0;
+    padding: 0;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+}
+
+.loader .icon .circle-2.animation {
+    animation-name: circle-2-animation;
+    animation-duration: .8s;
+    animation-direction: normal;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+  }
+  
+@keyframes circle-2-animation {
+    from {width: 50%;height: 50%;}
+    to {width: 100%;height: 100%;}
+}
+
