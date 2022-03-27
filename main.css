@@ -5,7 +5,7 @@
     --font-1: 'Lato', sans-serif;
     --font-2: 'Poppins', sans-serif;
 
-    --color-primary: orangered;
+    --color-primary: orangevar(--bg-4);
     --color-secondary: orange;
 
     --bg-1: #001e00;
@@ -67,7 +67,7 @@ body {
 .icon {
     width: 35px;
     height: 35px;
-  }
+}
   
 .avatar {
     margin: 0;
@@ -110,7 +110,7 @@ body {
     padding: 20px 40px;
 }
 
-.content .data {
+.content .qn {
     margin-left: .5rem;
     padding: 1rem 1.5rem;
     background-color: var(--bg-6);
@@ -131,45 +131,71 @@ body {
     font-weight: bold;
 }
 
-.loader .icon {
-    height: 3rem;
-    width: 3rem;
-    position: relative;
-}
-
-.loader .icon .circle-1 {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
+.loader {
+    border: 5px solid var(--bg-4);
+    border-top: 5px solid var(--color-secondary);
     border-radius: 50%;
-    background-color: var(--color-primary);
+    width: 50px;
+    height: 50px;
+    animation: spin 1.5s linear infinite;
 }
-
-.loader .icon .circle-2 {
-    margin: 0;
-    padding: 0;
-    height: 50%;
-    width: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background-color: var(--color-secondary);
-}
-
-.loader .icon .circle-2.animation {
-    animation-name: circle-2-animation;
-    animation-duration: .8s;
-    animation-direction: normal;
-    animation-delay: 0;
-    animation-iteration-count: infinite;
-  }
   
-@keyframes circle-2-animation {
-    from {width: 50%;height: 50%;}
-    to {width: 100%;height: 100%;}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
+.row {
+    margin-bottom: .5rem;
+}
+
+.circle {
+    margin: 0 .2rem;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--bg-4);
+}
+
+.circle:nth-child(1) {
+    animation: full-1 1.5s linear infinite;
+}
+
+.circle:nth-child(2) {
+    animation: full-2 1.5s linear infinite;
+}
+
+.circle:nth-child(3) {
+    animation: full-3 1.5s linear infinite;
+}
+
+@keyframes full-1 {
+    0% {background-color: var(--bg-3);}
+    50% {background-color: var(--bg-4);}
+    100% {background-color: var(--bg-4);}
+}
+
+@keyframes full-2 {
+    0% {background-color: var(--bg-4);}
+    50% {background-color: var(--bg-3);}
+    100% {background-color: var(--bg-4);}
+}
+
+@keyframes full-3 {
+    0% {background-color: var(--bg-4);}
+    50% {background-color: var(--bg-4);}
+    100% {background-color: var(--bg-3);}
+}
+
+.ans.flex {
+    justify-content: flex-end;
+}
+
+.ans .an {
+    margin: .1rem;
+    padding: .5rem;
+    background-color: #beccbe;
+    border-radius: 10px;
+    width: 100px;
+    height: 70px;
+}
