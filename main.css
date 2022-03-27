@@ -92,6 +92,7 @@ body {
     background-color: var(--bg-9);
     width: 70%;
     height: 80%;
+    overflow-y: hidden;
     border-radius: 25px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
@@ -107,7 +108,17 @@ body {
 .content {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding: 20px 40px;
+    padding: 50px 40px;
+}
+
+.content .row {
+    height: 100%;
+    animation: slide-up 1.5s linear;
+}
+
+@keyframes slide-up {
+    0% {transform: translateY(70px);}
+    100% {transform: translateY(-7px);}
 }
 
 .content .qn {
@@ -158,44 +169,64 @@ body {
 }
 
 .circle:nth-child(1) {
-    animation: full-1 1.5s linear infinite;
+    animation: full-1 1.5s linear 0.4s infinite;
 }
 
 .circle:nth-child(2) {
-    animation: full-2 1.5s linear infinite;
+    animation: full-2 1.5s linear 0.2s infinite;
 }
 
 .circle:nth-child(3) {
-    animation: full-3 1.5s linear infinite;
+    animation: full-3 1.5s linear 0.0s infinite;
 }
 
 @keyframes full-1 {
-    0% {background-color: var(--bg-3);}
-    50% {background-color: var(--bg-4);}
-    100% {background-color: var(--bg-4);}
+    0% {background-color: var(--bg-3);transform: translateY(7px);}
+    50% {background-color: var(--bg-4);transform: translateY(-7px);}
+    100% {background-color: var(--bg-4);transform: translateY(7px);}
 }
 
 @keyframes full-2 {
-    0% {background-color: var(--bg-4);}
-    50% {background-color: var(--bg-3);}
-    100% {background-color: var(--bg-4);}
+    0% {background-color: var(--bg-4);transform: translateY(7px);}
+    50% {background-color: var(--bg-3);transform: translateY(-7px);}
+    100% {background-color: var(--bg-4);transform: translateY(7px);}
 }
 
 @keyframes full-3 {
-    0% {background-color: var(--bg-4);}
-    50% {background-color: var(--bg-4);}
-    100% {background-color: var(--bg-3);}
+    0% {background-color: var(--bg-4);transform: translateY(7px);}
+    50% {background-color: var(--bg-4);transform: translateY(-7px);}
+    100% {background-color: var(--bg-3);transform: translateY(7px);}
 }
 
 .ans.flex {
-    justify-content: flex-end;
+    justify-content: flex-start;
+    padding-left: 4rem;
 }
 
 .ans .an {
-    margin: .1rem;
+    margin: .2rem;
     padding: .5rem;
     background-color: #beccbe;
     border-radius: 10px;
-    width: 100px;
-    height: 70px;
+    width: 120px;
+    height: 150px;
+}
+
+.ans .an.flex {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ans .an:hover {
+    background-color: #afceaf;
+    cursor: pointer;
+}
+
+.ans .an .ti {
+    font-size: 2.3rem;
+}
+
+.ans .an .text-center {
+    text-align: center;
 }
