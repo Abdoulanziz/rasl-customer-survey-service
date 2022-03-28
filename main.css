@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
 
 :root {
-    --font-1: 'Lato', sans-serif;
-    --font-2: 'Poppins', sans-serif;
+    --font-1: 'Poppins', sans-serif;
+    --font-2: 'Lato', sans-serif;
 
-    --color-primary: orangevar(--bg-4);
+    --color-primary: orangered;
     --color-secondary: orange;
 
     --bg-1: #001e00;
@@ -40,6 +40,16 @@ body {
     color: var(--text-grey);
     font-family: var(--font-1);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-2);
+}
+
 
 .container {
     margin: 0 auto;
@@ -84,7 +94,11 @@ body {
     border: none;
     border-radius: 30px;
     color: var(--text-white);
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
+}
+
+.btn:hover {
+    background-color: rgb(255, 21, 0) !important;
 }
 
 .card {
@@ -98,7 +112,7 @@ body {
 }
 
 .header {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 20px 40px;
@@ -139,12 +153,12 @@ body {
     margin-bottom: 0;
     letter-spacing: normal;
     color: var(--text-white);
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 .loader {
     border: 5px solid var(--bg-4);
-    border-top: 5px solid var(--color-secondary);
+    border-top: 5px solid var(--color-primary);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -198,6 +212,11 @@ body {
     100% {background-color: var(--bg-3);transform: translateY(7px);}
 }
 
+.qn p {
+    font-family: var(--font-2);
+    font-weight: bold;
+}
+
 .ans.flex {
     justify-content: flex-start;
     padding-left: 4rem;
@@ -210,6 +229,8 @@ body {
     border-radius: 10px;
     width: 120px;
     height: 150px;
+    font-family: var(--font-2);
+    font-weight: normal;
 }
 
 .ans .an.star {
@@ -222,7 +243,7 @@ body {
     background: unset !important;
     width: 2.5rem !important;
     height: 2.5rem !important;
-    border: 1px solid orange;
+    border: 1px solid var(--color-primary);
 }
 
 .ans .an.flex {
@@ -232,12 +253,19 @@ body {
 }
 
 .ans .an:hover {
-    background-color: #afceaf;
+    background-color: var(--color-primary);
+    color: var(--text-white);
     cursor: pointer;
 }
 
 .ans .an .ti {
     font-size: 2.3rem;
+}
+
+.ans .an:hover .ti {
+    background-color: unset !important;
+    color: var(--color-primary) !important;
+    cursor: pointer;
 }
 
 .ans .an .text-center {
