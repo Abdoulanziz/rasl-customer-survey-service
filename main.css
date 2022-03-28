@@ -212,6 +212,19 @@ body {
     height: 150px;
 }
 
+.ans .an.star {
+    background: unset !important;
+    width: unset !important;
+    height: unset !important;
+}
+
+.ans .an.num {
+    background: unset !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    border: 1px solid orange;
+}
+
 .ans .an.flex {
     justify-content: center;
     align-items: center;
