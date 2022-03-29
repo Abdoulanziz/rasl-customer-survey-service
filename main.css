@@ -5,7 +5,7 @@
     --font-1: 'Poppins', sans-serif;
     --font-2: 'Lato', sans-serif;
 
-    --color-primary: orangered;
+    --color-primary: #f5824e;
     --color-secondary: orange;
 
     --bg-1: #001e00;
@@ -39,6 +39,9 @@ body {
 body {
     color: var(--text-grey);
     font-family: var(--font-1);
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 h1,
