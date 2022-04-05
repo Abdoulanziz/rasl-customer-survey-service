@@ -89,6 +89,14 @@ h6 {
     border-radius: 50%;
 }
 
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 .btn {
     display: inline-block;
     margin: .4rem 0 0 0;
@@ -291,6 +299,10 @@ h6 {
     color: var(--color-primary);
 }
 
+.ans .an.star.selected {
+    color: var(--color-primary) !important;
+}
+
 .ans .an.star .ti {
     font-size: 1.5rem;
 }
@@ -313,24 +325,57 @@ h6 {
 }
 
 .form-control.flex {
- justify-content: space-between;
+    justify-content: space-between;
+    border-top: 1px solid var(--text-grey);
+    padding-top: .2rem;
 }
 
 .form-control input {
     margin: 0 .3rem 0 0;
 }
 
-.form-control i {
-    margin: 0 .4rem;
+.form-control img {
+    background-color: var(--color-primary);
+    color: var(--text-white);
+    border-radius: 50%;
+    padding: .5rem;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
 }
 
 .form-control input[type='text'] {
+    color: var(--color-primary);
     width: 100%;
     padding: .2rem;
     border: none;
-    border-bottom: .1px solid var(--text-grey);
 }
 
 .form-control input[type='text']:focus {
     outline: none;
+}
+
+.form-control input[type='text']::-webkit-input-placeholder {
+    color: var(--color-primary);
+}
+  
+.form-control input[type='text']:-moz-placeholder { /* Firefox 18- */
+    color: var(--color-primary);  
+}
+
+.form-control input[type='text']::-moz-placeholder {  /* Firefox 19+ */
+    color: var(--color-primary);  
+}
+
+.form-control input[type='text']:-ms-input-placeholder {
+    color: var(--color-primary);  
+}
+
+.form-control input[type='text']::placeholder {
+    color: var(--color-primary);  
+}
+
+
+.a {
+    display: none;
 }
