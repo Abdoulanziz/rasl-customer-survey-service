@@ -15,152 +15,7 @@
                 <h3>Customer Satisfaction Survey</h3>
             </div>
             <div class="content">
-                <form class="survey-form">
-                    <div class="row">
-                        <div class="flex">
-                            <img src="./avatar.png" alt="Avatar" class="avatar">
-                            <div class="qn">
-                                <div class="a flex">
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                </div>
-                                <div class="b">
-                                    <p>Could you please spare a moment to share your thoughts with us?</p>
-                                    <button id="submit" class="btn">SURE THING! :)</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="flex">
-                            <img src="./avatar.png" alt="Avatar" class="avatar">
-                            <div class="qn">
-                                <div class="a flex">
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                </div>
-                                <div class="b">
-                                    <p>What are the top reasons that made you choose us?</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="alt-ans">
-                            <div class="ans ans-1 flex">
-                                <div class="an rec">
-                                    <div class="flex">
-                                        <i class="ti ti-star"></i>
-                                    </div>
-                                    <span class="label flex">Fast</span>
-                                </div>
-                                <div class="an rec">
-                                    <div class="flex">
-                                        <i class="ti ti-briefcase"></i>
-                                    </div>
-                                    <span class="label flex">Flexible</span>
-                                </div>
-                                <div class="an rec">
-                                    <div class="flex">
-                                        <i class="ti ti-check-box"></i>
-                                    </div>
-                                    <span class="label flex">Convenient</span>
-                                </div>
-                            </div>
-                            <div class="ans ans-2 flex">
-                                <div class="an rec">
-                                    <div class="flex">
-                                        <i class="ti ti-help-alt"></i>
-                                    </div>
-                                    <span class="label flex">Confidential</span>
-                                </div>
-                                <div class="an rec">
-                                    <div class="flex">
-                                        <i class="ti ti-file"></i>
-                                    </div>
-                                    <span class="label flex">Reliable</span>
-                                </div>
-                                <div class="an rec">
-                                    <div class="flex">
-                                        <i class="ti ti-link"></i>
-                                    </div>
-                                    <span class="label flex">Simple</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="flex">
-                            <img src="./avatar.png" alt="Avatar" class="avatar">
-                            <div class="qn">
-                                <div class="a flex">
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                </div>
-                                <div class="b">
-                                    <p>How would you rate the quality of our product?</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="alt-ans">
-                            <div class="ans flex">
-                                <div class="an star flex">
-                                    <i class="ti ti-star"></i>
-                                </div>
-                                <div class="an star flex">
-                                    <i class="ti ti-star"></i>
-                                </div>
-                                <div class="an star flex">
-                                    <i class="ti ti-star"></i>
-                                </div>
-                                <div class="an star flex">
-                                    <i class="ti ti-star"></i>
-                                </div>
-                                <div class="an star flex">
-                                    <i class="ti ti-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="flex">
-                            <img src="./avatar.png" alt="Avatar" class="avatar">
-                            <div class="qn">
-                                <div class="a flex">
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                </div>
-                                <div class="b">
-                                    <p>How satisfied are you with the competency of our customer support?</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="alt-ans">
-                            <div class="ans flex">
-                                <div class="an num flex">
-                                    <span>0</span>
-                                </div>
-                                <div class="an num flex">
-                                    <span>2</span>
-                                </div>
-                                <div class="an num flex">
-                                    <span>4</span>
-                                </div>
-                                <div class="an num flex">
-                                    <span>6</span>
-                                </div>
-                                <div class="an num flex">
-                                    <span>8</span>
-                                </div>
-                                <div class="an num flex">
-                                    <span>10</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <form class="survey-forms"></form>
             </div>
             <div class="footer">
                 <div class="form-control flex">
@@ -171,6 +26,11 @@
         </div>
     </div>
     
-    <script src="main.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            renderRow1();
+        });
+    </script>
 </body>
 </html>
