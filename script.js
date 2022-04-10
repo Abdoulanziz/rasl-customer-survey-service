@@ -28,6 +28,7 @@ function renderRow1(){
 
     document.querySelector('.btn').addEventListener('click', (e)=>{
         e.preventDefault();
+        rows[0].classList.add('hide');
         renderRow2();
     });
     document.querySelector('.content').scrollTop = document.querySelector('.content').scrollHeight;
@@ -104,12 +105,19 @@ function renderRow2(){
         ans[0].classList.remove('hide');
     }, 2000);
 
-    ans[0].querySelectorAll('.an.rec').forEach(rec=>{
-        rec.addEventListener('click', ()=>{
-            rec.classList.add('selected');
-            renderRow3();
+    const ansAnRec = ans[0].querySelectorAll('.an.rec');
+    for(let i=0; i<ansAnRec.length; i++){
+        ansAnRec[i].addEventListener('click', ()=>{
+            ansAnRec[0].classList.remove('selected');
+            ansAnRec[1].classList.remove('selected');
+            ansAnRec[2].classList.remove('selected');
+            ansAnRec[3].classList.remove('selected');
+            ansAnRec[4].classList.remove('selected');
+            ansAnRec[5].classList.remove('selected');
+            ansAnRec[i].classList.add('selected');
+            if(!document.querySelectorAll('.row')[2]) renderRow3();
         });
-    });
+    }
     document.querySelector('.content').scrollTop = document.querySelector('.content').scrollHeight;
 }
 
@@ -161,12 +169,50 @@ function renderRow3(){
         ans[1].classList.remove('hide');
     }, 2000);
 
-    ans[1].querySelectorAll('.an.star').forEach(star=>{
-        star.addEventListener('click', ()=>{
-            star.classList.add('selected');
-            renderRow4();
+    const ansAnStar = ans[1].querySelectorAll('.an.star');
+    for(let i=0; i<ansAnStar.length; i++){
+        ansAnStar[i].addEventListener('click', ()=>{
+            ansAnStar[0].classList.remove('selected');
+            ansAnStar[1].classList.remove('selected');
+            ansAnStar[2].classList.remove('selected');
+            ansAnStar[3].classList.remove('selected');
+            ansAnStar[4].classList.remove('selected');
+
+            switch(i){
+                case 0: {
+                    ansAnStar[0].classList.add('selected');
+                    break;
+                }
+                case 1: {
+                    ansAnStar[0].classList.add('selected');
+                    ansAnStar[1].classList.add('selected');
+                    break;
+                }
+                case 2: {
+                    ansAnStar[0].classList.add('selected');
+                    ansAnStar[1].classList.add('selected');
+                    ansAnStar[2].classList.add('selected');
+                    break;
+                }
+                case 3: {
+                    ansAnStar[0].classList.add('selected');
+                    ansAnStar[1].classList.add('selected');
+                    ansAnStar[2].classList.add('selected');
+                    ansAnStar[3].classList.add('selected');
+                    break;
+                }
+                case 4: {
+                    ansAnStar[0].classList.add('selected');
+                    ansAnStar[1].classList.add('selected');
+                    ansAnStar[2].classList.add('selected');
+                    ansAnStar[3].classList.add('selected');
+                    ansAnStar[4].classList.add('selected');
+                    break;
+                }
+            }
+            if(!document.querySelectorAll('.row')[3]) renderRow4();
         });
-    });
+    }
 
     document.querySelector('.content').scrollTop = document.querySelector('.content').scrollHeight;
 }
@@ -222,35 +268,20 @@ function renderRow4(){
         ans[2].classList.remove('hide');
     }, 2000);
 
-    ans[2].querySelectorAll('.an.num').forEach(num=>{
-        num.addEventListener('click', ()=>{
-            num.classList.add('selected');
-            renderRow4();
+    const ansAnNum = ans[2].querySelectorAll('.an.num');
+    for(let i=0; i<ansAnNum.length; i++){
+        ansAnNum[i].addEventListener('click', ()=>{
+            ansAnNum[0].classList.remove('selected');
+            ansAnNum[1].classList.remove('selected');
+            ansAnNum[2].classList.remove('selected');
+            ansAnNum[3].classList.remove('selected');
+            ansAnNum[4].classList.remove('selected');
+            ansAnNum[5].classList.remove('selected');
+            ansAnNum[i].classList.add('selected');
+            document.querySelector('.footer').classList.remove('hide');
+            document.querySelector('.content').scrollTop = document.querySelector('.content').scrollHeight;
         });
-    });
-    document.querySelector('.content').scrollTop = document.querySelector('.content').scrollHeight;
+    }
 }
 
 
-// REFACTOR FORMAT !!!
-function callback1(e){
-    e.preventDefault();
-    renderRow2();
-}
-function callback2(e){
-    if(e.target == document.querySelector('.an.rec')){
-        e.target.classList.add('selected');
-        renderRow3();
-    }
-}
-function callback3(e){
-    if(e.target == document.querySelector('.an.star .ti')){
-        e.target.classList.add('selected');
-        renderRow4();
-    }
-}
-function callback4(e){
-    if(e.target == document.querySelector('.an.num')){
-        e.target.classList.add('selected');
-    }
-}
