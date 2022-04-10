@@ -28,7 +28,7 @@ function renderRow1(){
 
     document.querySelector('.btn').addEventListener('click', (e)=>{
         e.preventDefault();
-        rows[0].classList.add('hide');
+        //rows[0].classList.add('hide');
         renderRow2();
     });
     document.querySelector('.content').scrollTop = document.querySelector('.content').scrollHeight;
