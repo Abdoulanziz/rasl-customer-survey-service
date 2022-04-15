@@ -1,3 +1,5 @@
+const responses = [];
+
 function renderRow1(){
     const template = document.createElement('div');
     template.classList.add(...['row']);
@@ -28,13 +30,14 @@ function renderRow1(){
 
     document.querySelector('.btn').addEventListener('click', (e)=>{
         e.preventDefault();
-        //rows[0].classList.add('hide');
+        rows[0].classList.add('hide');
         renderRow2();
     });
     document.querySelector('.content').scrollTop = document.querySelector('.content').scrollHeight;
 }
 
 function renderRow2(){
+    let response = "";
     const template = document.createElement('div');
     template.classList.add(...['row']);
     template.innerHTML = `
@@ -116,12 +119,15 @@ function renderRow2(){
             ansAnRec[5].classList.remove('selected');
             ansAnRec[i].classList.add('selected');
             if(!document.querySelectorAll('.row')[2]) renderRow3();
+            response = i+1;
+            responses[0] = response;
         });
     }
     document.querySelector('.content').scrollTop = document.querySelector('.content').scrollHeight;
 }
 
 function renderRow3(){
+    let response = "";
     const template = document.createElement('div');
     template.classList.add(...['row']);
     template.innerHTML = `
@@ -210,6 +216,8 @@ function renderRow3(){
                     break;
                 }
             }
+            response = i+1;
+            responses[1] = response;
             if(!document.querySelectorAll('.row')[3]) renderRow4();
         });
     }
@@ -218,6 +226,7 @@ function renderRow3(){
 }
 
 function renderRow4(){
+    let response = "";
     const template = document.createElement('div');
     template.classList.add(...['row']);
     template.innerHTML = `
@@ -278,8 +287,18 @@ function renderRow4(){
             ansAnNum[4].classList.remove('selected');
             ansAnNum[5].classList.remove('selected');
             ansAnNum[i].classList.add('selected');
-            document.querySelector('.footer').classList.remove('hide');
+            rows[3].scroll({
+                top: 500,
+                left: 100,
+                behavior: 'smooth'
+              });
+            if(document.querySelector('.footer').classList.contains('hide')){
+                document.querySelector('.footer').classList.remove('hide');
+            }
+            
             document.querySelector('.content').scrollTop = document.querySelector('.content').scrollHeight;
+            response = i+1;
+            responses[2] = response;
         });
     }
 }
